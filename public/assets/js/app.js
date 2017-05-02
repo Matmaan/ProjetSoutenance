@@ -12,7 +12,7 @@ $("button.btn-report").on("click", function(){
     // On limite les requete ajax au message qui ne sont pas vu
     if( $(this).parent().hasClass("bg-warning") ){
         // Marque le message comme vu dans la bdd
-        $.ajax({url: "/report/seen/" + id,});
+        $.ajax({url: "report/seen/" + id,});
     }
 
     // Marque le message comme vu sur la page
@@ -34,7 +34,7 @@ $("button.btn-delete").on("click", function(){
     $("#displayed-report").html( "Rapport supprimé." );
 
     // Supprime le message de la bdd
-    $.ajax({url: "/report/deleteReport/" + id,});
+    $.ajax({url: "report/deleteReport/" + id,});
 });
 
 
