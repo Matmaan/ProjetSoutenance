@@ -23,13 +23,6 @@ CREATE TABLE buildings (
   `wall` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO buildings (id, id_user, rank, camp, wood_farm, food_farm, water_farm, wood_stock, food_stock, water_stock, cabanon, radio, wall) VALUES
-(1, 1, 0, 0, 10, 10, 10, 0, 0, 1, 0, 0, 0),
-(2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(3, 3, 0, 0, 100, 100, 100, 100, 100, 100, 100, 100, 20),
-(4, 4, 0, 0, 15, 15, 9, 5, 3, 1, 2, 2, 1),
-(5, 5, 0, 0, 2, 2, 1, 0, 0, 0, 0, 0, 0),
-(6, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 CREATE TABLE construct (
   `id` int(10) UNSIGNED NOT NULL,
@@ -45,14 +38,6 @@ CREATE TABLE construct (
   `radio` int(11) DEFAULT NULL,
   `wall` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-INSERT INTO construct (id, id_user, camp, wood_farm, food_farm, water_farm, wood_stock, food_stock, water_stock, cabanon, radio, wall) VALUES
-(1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(2, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(3, 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(4, 4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(5, 5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(6, 6, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 CREATE TABLE param (
   `id` int(10) UNSIGNED NOT NULL,
@@ -82,14 +67,6 @@ CREATE TABLE ressources (
   `camper` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO ressources (id, id_user, water, food, wood, camper) VALUES
-(1, 1, 14439, 42977, 67343, 14932990),
-(2, 2, 13913, 19002, 47297, 7227435),
-(3, 3, 6556640, 6348115, 13068119, 25729296),
-(4, 4, 454852, 1592639, 2593554, 670908),
-(5, 5, 516917, 3310, 685831, 27),
-(6, 6, 100, 712, 1429, 166);
-
 CREATE TABLE users (
   `id` int(10) UNSIGNED NOT NULL,
   `username` varchar(60) NOT NULL,
@@ -106,10 +83,6 @@ CREATE TABLE users (
   `refresh_camper` int(11) NOT NULL,
   `attacking_campers` int(10) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-INSERT INTO users (id, username, email, birthday, role, `password`, refresh_wood, refresh_water, refresh_food, token, date_create, date_last_connexion, refresh_camper, attacking_campers) VALUES
-(6, '02/05_Zboby', 'zboby@mail.fr', '1986-10-06', '1', '$2y$10$G2noDB66JbiNLoAVIn7mB.cPoTbr6/IWrLxlqEEfLfglIStyy18NK', 1493726603, 1493725719, 1493726594, 0, '2017-05-02 13:48:39', 1493733224, 1493726594, 0);
-
 
 ALTER TABLE buildings
   ADD PRIMARY KEY (`id`),
@@ -148,7 +121,7 @@ ALTER TABLE construct
 ALTER TABLE param
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 ALTER TABLE reports
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 ALTER TABLE ressources
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 ALTER TABLE users

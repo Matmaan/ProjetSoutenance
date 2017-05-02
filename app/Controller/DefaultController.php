@@ -37,7 +37,7 @@ class DefaultController extends Controller
 
 		$user = $this->getUser();
 		// Perdre des ressources
-		$_SESSION['user']['date_last_connexion'] = 1490370723;
+		// $_SESSION['user']['date_last_connexion'] = 1490370723;
 
 		$alert = "";
 		// Attaque si l'utilisateur ne se déconnecte pas
@@ -54,7 +54,7 @@ class DefaultController extends Controller
 			for ($i=0; $i < $lastCo; $i++) {
 				$user_manager->getAttacked($this->getUser()['id'], $mur->GetNiveau(), $param[0]['z_atk_proba'], $param[0]['p_atk_proba']);
 			}
-			
+
 			// Récupére les rapports
 			$report_manager = new ReportsModel();
 			$reports = $report_manager->findAllById($this->getUser()['id']);
