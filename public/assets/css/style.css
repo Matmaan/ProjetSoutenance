@@ -1,0 +1,68 @@
+html, body {
+	font-family: Consolas, monaco, monospace;
+	background-color: #272822;
+	color: #F8F8F2;
+}
+
+.container {
+	margin: 50px;
+}
+
+a {
+	text-decoration: none;
+	color: #A6E22E;
+}
+
+a:hover {
+	color: #F92672;
+}
+
+h1 {
+	color: #F92672;
+}
+
+h2 {
+	color: #66D9EF;
+}
+
+li{
+	color:white;
+}
+
+.navbar-inverse .navbar-nav>li>a{
+	color:#ca0dca;
+}
+
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover{
+	color:greenyellow;
+}
+
+#game-board{
+	margin-left:25%;
+	margin-right: 25%;
+}
+
+/*p{
+	color:greenyellow;
+}*/
+.report-preview p{
+	color: grey;
+}
+
+img {
+	width: 360px;
+	height: 360px;
+}
+
+#zone_chat{
+    width: 100%;
+    height: 380px;
+	overflow: auto;
+}
+header {
+	width: 70%;
+	display: block;
+	margin: auto;
+}
+
+
