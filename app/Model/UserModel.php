@@ -246,9 +246,6 @@ class UserModel extends UsersModel
         // Chance d'attaque
         $atk = rand(0, 100);
 
-        // Modif de test
-        $probaZombie = 0; $probaPlayer = 100;
-
         // Attaque de zombies ?
         if ($atk < $probaZombie){
             $atkResult = rand(0, 100);
@@ -289,24 +286,7 @@ class UserModel extends UsersModel
 
             // Fin attaque de zombies
         } elseif ( $atk < ($probaZombie + $probaPlayer) ) {
-            // Attaque de joueur ?
-            /*
-            attack:
-            0: n'attaque pas
-            1: veut attaquer
-
-            - Trouver s'il y a des joueurs qui veulent attaquer
-            - S'il y en a, on check la proba atkPlayer + atkZombie
-            - Résultat de l'attaque :
-            . Défaite : capacité max transport = 20 * campeur de l'attaquant
-            capaMax = capacitéMax / 3
-            déf ressource loss -= 20% <  < 70%
-            gain = min(capaMax, déf ressource loss)
-            perte de campeur ? pour qui ?
-            --> ajoute les gain à l'attaquant, les retire au défenseur
-
-            . Victoire : l'attaquant perd des campeurs, le défenseur en gagne ?
-            */
+            // Attaque de joueur
             $atkResult = rand(0, 100);
             $users = $this->findAll();
             foreach ($users as $user) {
