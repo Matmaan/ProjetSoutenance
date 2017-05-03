@@ -155,7 +155,7 @@ class UserController extends Controller
 						$headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
 
 						// Envoie du mail
-						mail('philippe.gruet@outlook.fr', 'Créez votre nouveau mot de passe', $message, $headers);
+						mail($res['email'], 'Créez votre nouveau mot de passe', $message, $headers);
 
 						$this->show('user/reset', [
 							'display' => "mailSent",
