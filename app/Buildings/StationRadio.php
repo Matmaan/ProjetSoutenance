@@ -29,7 +29,7 @@ class StationRadio
 	private $TempsBase = 401;
 	private $TempsCourant;
 
-	private $Niveau = 1;
+	private $Niveau = 0;
 	private $RatioProd = 1.3;
 
 	public function __construct () {
