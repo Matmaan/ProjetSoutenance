@@ -96,6 +96,31 @@ class DefaultController extends Controller
 		$this->show('default/building');
 	}
 
+	public function exploration()
+	{
+		$error = [];
+		if ( !empty($_POST) && !empty($_POST['campers']) && is_numeric($_POST['campers']))
+		{
+			if ($_POST['campers'] > $_SESSION['ressources']->camper) {
+				$error['campers'] = "Vous n'avez pas assez de campeurs.";
+			} else {
+				$user_manager = new UserModel();
+				$user_manager->update([
+					'attacking_campers'=>$_POST['campers']
+				], $this->getUser()['id']);
+				$auth_manager = new \W\Security\AuthentificationModel();
+				$auth_manager->refreshUser();
+			}
+		}
+
+		$DefaultModel = new DefaultModel();
+		$DefaultModel->refreshTimer();
+		$this->show('default/exploration',[
+			'DefaultModel' => $DefaultModel,
+			'errors' => $error,
+		]);
+	}
+
 	public function report()
 	{
 		$DefaultModel = new DefaultModel();

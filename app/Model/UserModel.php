@@ -246,9 +246,6 @@ class UserModel extends UsersModel
         // Chance d'attaque
         $atk = rand(0, 100);
 
-        // Modif de test
-        $probaZombie = 0; $probaPlayer = 100;
-
         // Attaque de zombies ?
         if ($atk < $probaZombie){
             $atkResult = rand(0, 100);
@@ -289,28 +286,11 @@ class UserModel extends UsersModel
 
             // Fin attaque de zombies
         } elseif ( $atk < ($probaZombie + $probaPlayer) ) {
-            // Attaque de joueur ?
-            /*
-            attack:
-            0: n'attaque pas
-            1: veut attaquer
-
-            - Trouver s'il y a des joueurs qui veulent attaquer
-            - S'il y en a, on check la proba atkPlayer + atkZombie
-            - Résultat de l'attaque :
-            . Défaite : capacité max transport = 20 * campeur de l'attaquant
-            capaMax = capacitéMax / 3
-            déf ressource loss -= 20% <  < 70%
-            gain = min(capaMax, déf ressource loss)
-            perte de campeur ? pour qui ?
-            --> ajoute les gain à l'attaquant, les retire au défenseur
-
-            . Victoire : l'attaquant perd des campeurs, le défenseur en gagne ?
-            */
+            // Attaque de joueur
             $atkResult = rand(0, 100);
             $users = $this->findAll();
             foreach ($users as $user) {
-                if ($user['attacking_campers']) {
+                if ($user['attacking_campers'] && $user['id'] != $id_user) {
                     // Les utilisateurs attaquant
                     $attackingUsers [] = $user;
                 }
@@ -435,6 +415,9 @@ class UserModel extends UsersModel
                   'name'      => "Compte rendu de l'exploration",
                   'report'    => $atkReport,
               ], false);
+
+              // Un joueur a attaqué, son nombre de campeurs voulant attaqué repasse à 0
+              $this->update(['attacking_campers'=>0],$a_user['id']);
             } else {
               // Aucune attaque dans la nuit
               $reportName = "Compte rendu de la nuit";
@@ -448,17 +431,16 @@ class UserModel extends UsersModel
 
         // Ajouter le rapport à l'utilisateur en bdd
         // Défenseur
-
         $report_manager->insert([
             'id_user'   => $id_user,
             'name'      => $reportName,
             'report'    => $report,
         ], false);
 
-        var_dump($report);
-        if(isset($atkReport)){
-            var_dump($atkReport);
-        }
+        // var_dump($report);
+        // if(isset($atkReport)){
+        //     var_dump($atkReport);
+        // }
     }
 
 }

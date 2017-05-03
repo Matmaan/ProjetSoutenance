@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title><?= $this->e($title) ?></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
 	<meta name="viewport" content="width=device-width, user-scalable=no">
@@ -27,11 +28,14 @@
 				<!-- Utilisateur connecté -->
 				<li <?= ($w_current_route == 'default_camp') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('default_camp'); ?>">Accueil</a></li>
 				<li <?= ($w_current_route == 'default_report') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('default_report'); ?>">Rapports<?=($_SESSION['newReport'] > 0)?"(".$_SESSION['newReport'].")":"";?></a></li>
+				<li <?= ($w_current_route == 'default_exploration') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('default_exploration'); ?>">Exploration</a></li>
 			<?php else: ?>
 				<!-- Utilisateur non connecté -->
 				<li <?= ($w_current_route == 'user_login') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('user_login'); ?>">Accueil</a></li>
 			<?php endif; ?>
+
 				<li <?= ($w_current_route == 'default_classement') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('default_classement',['page'=>1]); ?>">Classement</a></li>
+
 			</ul>
 			
 			<ul class="nav navbar-nav navbar-right">
