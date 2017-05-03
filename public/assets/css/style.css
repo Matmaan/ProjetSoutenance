@@ -37,14 +37,7 @@ li{
 	color:greenyellow;
 }
 
-#game-board{
-	margin-left:25%;
-	margin-right: 25%;
-}
 
-/*p{
-	color:greenyellow;
-}*/
 .report-preview p{
 	color: grey;
 }
@@ -65,4 +58,21 @@ header {
 	margin: auto;
 }
 
+.media {
+	float: left;
+	margin-bottom: 30px;
+}
 
+#game-board {
+	margin: 0 auto;
+}
+
+.ress ul li {
+	padding: 15px; 
+	border: 3px solid white;
+	display: inline;
+}
+
+.ress ul {
+	list-style-type: none;
+}

@@ -8,26 +8,28 @@
 
 <?php endif; ?>
 <div class="container" id="game-board">
-    <h1 class="text-center">Campement</h1>
-    <!--<div class="row">
-        <div class="col-md-12">
-            <h1 class="text-center">Campement</h1>
-            <img class="d-flex img-responsive mr-3" src="" alt="Generic placeholder image" id="camp">
-            <div>
-                <a class="btn btn-primary btn-block" href="<?=$this->url('default_building',['idBuilding'=>1])?>">Voir</a>
-                <a class="btn btn-success btn-block" href="<?=$this->url('default_upgrade',['idBuilding'=>1])?>">Construire</a>
-            </div>
+    <div class="row">
+        <div class="ress col-md-12 text-center col-xs-12">
+            <ul class="">
+                <li class="col-md-3 col-xs-6">Bois : <?php echo $_SESSION["ressources"]->wood; ?></li>
+                <li class="col-md-3 col-xs-6">Nourriture : <?php echo $_SESSION["ressources"]->food; ?></li>
+                <li class="col-md-3 col-xs-6">Eau : <?php echo $_SESSION["ressources"]->water; ?></li>
+                <li class="col-md-3 col-xs-6">Campers : <?php echo $_SESSION["ressources"]->camper; ?></li>
+            </ul>
         </div>
-    </div>-->
+    </div>
+    <h1 class="text-center">Campement</h1>
         <!--batiment 1-->
     </br>
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-8">
             <div class="media">
             <img class="d-flex mr-3" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
             <div class="media-body">
                 <h5 class="mt-0 text-left"><strong>Camp de bûcheron</strong> Niveau : <?php echo $_SESSION["buildings"]->wood_farm; ?></h5>
-                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+                Le camp de bûcheron vous permettra d'enrichir votre camp en bois, une ressource essentielle à la survie de votre camp. Le bois étant la ressource base pour toute les constructions.
+
                 <p>Prix : <?php echo $bucheron->GetPrixBois(); ?> bois</p>
                 <a class="btn btn-primary btn-block" href="<?=$this->url('default_building',['idBuilding'=>2])?>">Voir</a>
 
@@ -43,12 +45,13 @@
             </div>
         </div>
         <!--batiment 2-->
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-8">
             <div class="media">
             <img class="d-flex mr-3" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
             <div class="media-body">
                 <h5 class="mt-0 text-left"><strong>Ferme</strong> Niveau : <?php echo $_SESSION["buildings"]->food_farm; ?></h5>
-                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+                Comment survivre sans manger ? Impossible ! Cette ferme vous aidera à faire prospérer votre campement dans la durée. Les zombies ne sont pas conseillé dans l'élevage.
 
                 <p>Prix : <?php echo $ferme->GetPrixBois(); ?> Bois <?php echo $ferme->GetPrixNourriture(); ?> nourriture</p>
 
@@ -67,12 +70,13 @@
             </div>
         </div>
         <!--batiment 3-->
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-8">
             <div class="media">
                 <img class="d-flex mr-3" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
                 <div class="media-body">
                     <h5 class="mt-0 text-left"><strong>Puit</strong> Niveau : <?php echo $_SESSION["buildings"]->water_farm; ?></h5>
-                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                    
+                    La base de la vie, l'eau ! Evidemment elle est tellement importante qu'elle est très rare. Il faut donc l'utiliser à bon escient.
 
                     <p>Prix : <?php echo $puit->GetPrixBois(); ?> bois <?php echo $puit->GetPrixNourriture(); ?> nourriture <?php echo $puit->GetPrixEau(); ?> eau</p>
 
@@ -90,16 +94,18 @@
                 </div>
             </div>
         </div>
-    </div>
+    <!-- </div> -->
         <!--batiment 4-->
-    <div class="row">
+    <!-- <div class="row"> -->
         </br>
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-8">
             <div class="media">
             <img class="d-flex mr-3" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
             <div class="media-body">
                 <h5 class="mt-0 text-left"><strong>Hangar</strong> Niveau : <?php echo $_SESSION["buildings"]->wood_stock; ?></h5>
-                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+                Dans un monde post-apocalyptique il est évident que la richesse et le pouvoir passe par possession de ressource essentiel à la survie c'est pourquoi ce hangar vous aidera à stocker votre bois.
+
 
                 <p>Prix : <?php echo $hangar->GetPrixBois(); ?> bois</p>
 
@@ -122,12 +128,13 @@
             </div>
         </div>
         <!--batiment 5-->
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-8">
             <div class="media">
             <img class="d-flex mr-3" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
             <div class="media-body">
                 <h5 class="mt-0 text-left"><strong>Garde manger</strong> Niveau : <?php echo $_SESSION["buildings"]->food_stock; ?></h5>
-                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+                A défaut d'avoir un frigo et de l'électricité au bout du fil il faut prévoir un lieu pour stocker votre nourriture sachant qu'elle est très prisée des zombies et des autres camps.
 
                 <p>Prix : <?php echo $garde_manger->GetPrixBois(); ?> Bois <?php echo $garde_manger->GetPrixNourriture(); ?> nourriture</p>
 
@@ -147,12 +154,13 @@
             </div>
         </div>
         <!--batiment 6-->
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-8">
             <div class="media">
             <img class="d-flex mr-3" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
             <div class="media-body">
                 <h5 class="mt-0 text-left"><strong>Citerne</strong> Niveau : <?php echo $_SESSION["buildings"]->water_stock; ?></h5>
-                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+                L'eau peut être très vite contaminée par les zombies et les autre camps qui vous chercher à réduire votre camp à néant pour vous piller.
 
                 <p>Prix : <?php echo $citerne->GetPrixBois(); ?> bois <?php echo $citerne->GetPrixNourriture(); ?> nourriture <?php echo $citerne->GetPrixEau(); ?> eau</p>
 
@@ -172,16 +180,17 @@
             </div>
             </div>
         </div>
-    </div>
+    <!-- </div> -->
         <!--batiment 7 -->
     </br>
-    <div class="row">
-        <div class="col-md-4">
+    <!-- <div class="row"> -->
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-8">
             <div class="media">
             <img class="d-flex mr-3" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
             <div class="media-body">
                 <h5 class="mt-0 text-left"><strong>Cabanon</strong> Niveau : <?php echo $_SESSION["buildings"]->cabanon; ?></h5>
-                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+                Après avoir bien manger et bien bu vous serez bien content de bien dormir et quoi de mieux qu'une cabane que vous rêviez de bâtir étant petit.
 
                 <p>Prix : <?php echo $cabane->GetPrixBois(); ?> bois <?php echo $cabane->GetPrixNourriture(); ?> nourriture <?php echo $cabane->GetPrixEau(); ?> eau</p>
 
@@ -202,12 +211,13 @@
             </div>
         </div>
         <!--batiment 8-->
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-8">
             <div class="media">
             <img class="d-flex mr-3" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
             <div class="media-body">
                 <h5 class="mt-0 text-left"><strong>Station de radio</strong> Niveau : <?php echo $_SESSION["buildings"]->radio; ?></h5>
-                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+                Plus on est de fous plus on rit ! Si vous espérez reconstruire l'humanité il va vous falloir de l'aider et pour avoir de l'aide il faut appeler à l'aide non ?
 
                 <p>Prix : <?php echo $radio->GetPrixBois(); ?> bois <?php echo $radio->GetPrixNourriture(); ?> nourriture <?php echo $radio->GetPrixEau(); ?> eau</p>
 
@@ -228,12 +238,13 @@
             </div>
         </div>
         <!--batiment 9-->
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-8">
             <div class="media">
             <img class="d-flex mr-3" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
             <div class="media-body">
                 <h5 class="mt-0 text-left"><strong>Mur de defense</strong> Niveau : <?php echo $_SESSION["buildings"]->wall; ?></h5>
-                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                
+                Afin de vous protéger des attaques de zombies il vous faut une enceinte pour vous protéger. Quoi de mieux qu'un mur qui pourra retenir une partie des assauts de zombies.
 
                 <p>Prix : <?php echo $mur->GetPrixBois(); ?> bois <?php echo $mur->GetPrixNourriture(); ?> nourriture <?php echo $mur->GetPrixEau(); ?> eau</p>
 
