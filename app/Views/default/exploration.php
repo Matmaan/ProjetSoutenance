@@ -31,5 +31,4 @@
         <?php endif; ?>
     </div>
 </div>
-<?php var_dump($_SERVER); ?>
 <?php $this->stop('main_content') ?>
