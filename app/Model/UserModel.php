@@ -290,7 +290,7 @@ class UserModel extends UsersModel
             $atkResult = rand(0, 100);
             $users = $this->findAll();
             foreach ($users as $user) {
-                if ($user['attacking_campers']) {
+                if ($user['attacking_campers'] && $user['id'] != $id_user) {
                     // Les utilisateurs attaquant
                     $attackingUsers [] = $user;
                 }
