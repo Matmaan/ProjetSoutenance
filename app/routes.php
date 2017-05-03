@@ -18,6 +18,7 @@
 		['GET', '/camp', 						'Default#camp', 'default_camp'],
 		['GET', '/view/[i:idBuilding]', 		'Default#building', 'default_building'],
 		['GET', '/upgrade/[i:idBuilding]', 		'Default#upgrade', 'default_upgrade'],
+		['GET|POST', '/exploration', 			'Default#exploration', 'default_exploration'],
 
 		// Rapport/message
 		['GET', '/report', 						'Default#report', 'default_report'],

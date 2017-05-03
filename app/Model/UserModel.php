@@ -435,6 +435,9 @@ class UserModel extends UsersModel
                   'name'      => "Compte rendu de l'exploration",
                   'report'    => $atkReport,
               ], false);
+
+              // Un joueur a attaqué, son nombre de campeurs voulant attaqué repasse à 0
+              $this->update(['attacking_campers'=>0],$a_user['id']);
             } else {
               // Aucune attaque dans la nuit
               $reportName = "Compte rendu de la nuit";
@@ -448,17 +451,16 @@ class UserModel extends UsersModel
 
         // Ajouter le rapport à l'utilisateur en bdd
         // Défenseur
-
         $report_manager->insert([
             'id_user'   => $id_user,
             'name'      => $reportName,
             'report'    => $report,
         ], false);
 
-        var_dump($report);
-        if(isset($atkReport)){
-            var_dump($atkReport);
-        }
+        // var_dump($report);
+        // if(isset($atkReport)){
+        //     var_dump($atkReport);
+        // }
     }
 
 }

@@ -27,10 +27,12 @@
 				<!-- Utilisateur connecté -->
 				<li <?= ($w_current_route == 'default_camp') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('default_camp'); ?>">Accueil</a></li>
 				<li <?= ($w_current_route == 'default_report') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('default_report'); ?>">Rapports<?=($_SESSION['newReport'] > 0)?"(".$_SESSION['newReport'].")":"";?></a></li>
+				<li <?= ($w_current_route == 'default_exploration') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('default_exploration'); ?>">Exploration</a></li>
 			<?php else: ?>
 				<!-- Utilisateur non connecté -->
 				<li <?= ($w_current_route == 'user_login') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('user_login'); ?>">Accueil</a></li>
 			<?php endif; ?>
+
 			<li <?= ($w_current_route == 'default_classement') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('default_classement',['page'=>1]); ?>">Classement</a></li>
 			</ul>
 				<?php if ($w_user) { ?>
