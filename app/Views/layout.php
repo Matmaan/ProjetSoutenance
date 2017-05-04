@@ -12,7 +12,7 @@
 <body>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<header>
-		<img src="../public/assets/img/LOGO_Campeurs_VS_Zombies.png" alt="logo" class="img-responsive" id="logo">
+		<img src="<?= $this->assetUrl('img/LOGO_Campeurs_VS_Zombies.png') ?>" alt="logo" class="img-responsive" id="logo">
 	</header>
 	<nav class="navbar navbar-inverse">
 		<div class="navbar-header">

@@ -98,8 +98,11 @@ header {
 .btn-success:focus{
 	background-color: #654227;
 	border: 2px solid #301d16;
+}
+
 .header img {
-	margin: auto; 
+	display: block;
+	margin: 0 auto; 
 }
 
 .header {
