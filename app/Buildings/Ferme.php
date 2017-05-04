@@ -50,7 +50,7 @@ class Ferme
             else{
             	$date = date_create(); 
             	$timer = $_SESSION["construct"]->$nom; 
-            	$this->barre = "<div id='bar".$this->id."'>".$DefaultModel->buttonConstruct($_SESSION["construct"]->$nom, $this->GetTemps(), $this->id, $timer)."</div>";
+            	$this->barre = "<progress class='barre' min='0' max='100' value='0' id='bar".$this->id."'".$DefaultModel->buttonConstruct($_SESSION["construct"]->$nom, $this->GetTemps(), $this->id, $timer)."</progress>";
             }
 		}
 	}

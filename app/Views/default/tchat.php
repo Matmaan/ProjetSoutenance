@@ -9,7 +9,7 @@
             <section id="zone_chat">
                 
             </section>
-                        <form action="/" method="post" id="formulaire_chat">
+            <form action="/" method="post" id="formulaire_chat">
                 <div class="form-group">
                 <input type="text" name="message" id="message" placeholder="Votre message..."  class=" btn-default form-control"size="50" autocomplete="off" autofocus />
                 <!--<input type="submit" id="envoi_message" value="Envoyer"class="btn btn-default form-control" />-->
@@ -65,7 +65,6 @@
                     }
                 }
                 message = words.join(' ');
-                $('#zone_chat').prepend('<p><strong>' + pseudo + '</strong> ' + message + '</p>');
             }
         </script>
 <?php $this->stop('main_content') ?>
