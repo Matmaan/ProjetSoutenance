@@ -1,7 +1,7 @@
 <?php $this->layout('layout', ['title' => 'Exploration']) ?>
 
 <?php $this->start('main_content') ?>
-<div class="row">
+<div class="row explo">
     <div class="col-md-8 col-md-offset-2">
 
         <h2 class="text-center">Exploration</h2><br>

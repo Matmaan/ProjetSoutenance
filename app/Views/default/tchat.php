@@ -1,7 +1,7 @@
 <?php $this->layout('layout', ['title' => 'Tchat']) ?>
 
 <?php $this->start('main_content') ?>
-        <div class="col-md-6 col-md-offset-6">
+        <div class="col-md-6 col-md-offset-3">
             <h1 class="text-center">Feu de camps</h1>
 
 
