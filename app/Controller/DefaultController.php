@@ -165,6 +165,11 @@ class DefaultController extends Controller
 		]);
 	}
 
+	public function wiki()
+	{
+		$this->show('default/wiki');
+	}
+
 	public function tchat()
 	{
 		if ( !($this->getUser()) ) {

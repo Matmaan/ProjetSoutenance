@@ -33,6 +33,7 @@
 				<li <?= ($w_current_route == 'default_report') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('default_report'); ?>">Rapports<?=($_SESSION['newReport'] > 0)?"(".$_SESSION['newReport'].")":"";?></a></li>
 				<li <?= ($w_current_route == 'default_exploration') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('default_exploration'); ?>">Exploration</a></li>
 				<li <?= ($w_current_route == 'default_wiki') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('default_wiki'); ?>">Bien débuter</a></li>
+
 			<?php else: ?>
 				<!-- Utilisateur non connecté -->
 				<li <?= ($w_current_route == 'user_login') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('user_login'); ?>">Accueil</a></li>
