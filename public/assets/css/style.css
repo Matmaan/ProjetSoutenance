@@ -23,12 +23,14 @@ a:hover {
 	color: #F92672;
 }
 
-h1 {
-	color: #F92672;
+body h1 {
+	color: crimson;
+	text-decoration: underline;
 }
 
-h2 {
-	color: #66D9EF;
+body h2 {
+	color: crimson;
+	text-decoration: underline;
 }
 
 li{
@@ -52,7 +54,9 @@ li{
     width: 100%;
     height: 380px;
 	overflow: auto;
-	border:3px solid black;
+	border:3px solid white;
+	border-bottom:0px solid white;
+	border-radius: 1% 1% 0 0;
 	background-color: black;
 	opacity: 0.7;
 }
@@ -72,6 +76,7 @@ header {
 	margin: 0 auto;
 	background-color: black;
 	opacity: 0.7;
+	border-radius: 2%;
 }
 
 .ress ul li {
@@ -138,6 +143,7 @@ header {
 #userList{
 	background-color: black;
 	opacity: 0.7;
+	border-radius: 2%;
 }
 #logo {
 	margin: auto;
