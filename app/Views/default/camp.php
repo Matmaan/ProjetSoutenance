@@ -90,11 +90,7 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
     </div> 
-=======
-    </div>
->>>>>>> 4d78d175f855da2e7436f10122192c5cb02fbbe1
         <!--batiment 4-->
     <div class="row">
         </br>

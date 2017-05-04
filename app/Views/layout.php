@@ -10,17 +10,10 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <body>
-<<<<<<< HEAD
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<header>
 		<img src="../public/assets/img/LOGO_Campeurs_VS_Zombies.png" alt="logo" class="img-responsive" id="logo">
 	</header>
-=======
-	<div class="container header" style="margin: 0 auto;">
-		<img src="../public/assets/img/LOGO_Campeurs_VS_Zombies.png" alt="logo" class="img-responsive logoTop text-center" id="logo">
-	</div>
-
->>>>>>> 4d78d175f855da2e7436f10122192c5cb02fbbe1
 	<nav class="navbar navbar-inverse">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
