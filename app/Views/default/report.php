@@ -2,9 +2,9 @@
 <!-- style="height: 500px; overflow: overlay;" -->
 <?php $this->start('main_content') ?>
 <div class="container">
-    <h2>Rapports d'attaques.</h2>
-    <br>
-    <div class="col-md-4" id="reportList" style="height: 500px; overflow: overlay;">
+    <div class="col-md-6 col-md-offset-6" id="reportList" style="height: 500px; overflow: overlay;">
+        <h2>Rapports d'attaques.</h2>
+        <br>
         <?php if (empty($reports)): ?>
             <div class="row report-preview">
                 <p class="report-name">Aucun rapports</p>
