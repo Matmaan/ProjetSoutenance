@@ -2,7 +2,7 @@
 
 <?php $this->start('main_content') ?>
 <div class="row">
-    <div class="col-md-8 col-md-offset-4">
+    <div class="col-md-8 col-md-offset-2">
 
         <h2 class="text-center">Exploration</h2><br>
         <p>Vous pouvez envoyer un groupe de campeurs découvrir les environs. Par soucis de discrétion, ils partiront dans la nuit. Vous aurez un rapport à leur retour.</p><br>
