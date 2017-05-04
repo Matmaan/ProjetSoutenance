@@ -2,7 +2,7 @@
 
 <?php $this->start('main_content') ?>
     <h2>Liste des utilisateurs :</h2><br>
-    <table class="table">
+    <table class="table" id="userList">
         <thead>
             <tr>
                 <th>#</th>
