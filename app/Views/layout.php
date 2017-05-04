@@ -12,7 +12,7 @@
 <body>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<header>
-		<img src="<?= $this->assetUrl('img/LOGO_Campeurs_VS_Zombies.png') ?>" alt="logo" class="img-responsive" id="logo">
+		<img src="<?= $this->assetUrl('img/LOGO_Campeurs_VS_Zombies.png') ?>" alt="logo" class="img-responsive" id="logo" style="width: 360px; height: 260px;">
 	</header>
 	<nav class="navbar navbar-inverse">
 		<div class="navbar-header">
@@ -39,13 +39,14 @@
 				<li <?= ($w_current_route == 'default_classement') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('default_classement',['page'=>1]); ?>">Classement</a></li>
 
 			</ul>
-
+			<?php if ($w_user) { ?>
 			<ul class="nav navbar-nav ressources">
 				<li><a><img src="<?= $this->assetUrl('/img/wood.png'); ?>" alt="">Bois : <?php echo $_SESSION["ressources"]->wood; ?> </a></li>
 				<li><a><img src="<?= $this->assetUrl('/img/food.png'); ?>" alt="">Nourriture : <?php echo $_SESSION["ressources"]->food; ?> </a></li>
 				<li><a><img src="<?= $this->assetUrl('/img/water.png'); ?>" alt="">Eau : <?php echo $_SESSION["ressources"]->water; ?></a></li>
 				<li><a><img src="<?= $this->assetUrl('/img/camper.png'); ?>" alt="">Campers : <?php echo $_SESSION["ressources"]->camper; ?></a></li>
 			</ul>
+			<?php } ?>
 
 			<ul class="nav navbar-nav navbar-right">
 				<?php if ($w_user) { // si l'utilisateur est connecté ?>
