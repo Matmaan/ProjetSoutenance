@@ -43,7 +43,6 @@ class AdminController extends Controller
 			default:
 				break;
 		}
-		var_dump($_POST);
 		$this->show('admin/deleteUser', [
 			'user' => $user
 		]);
@@ -60,7 +59,6 @@ class AdminController extends Controller
 	public function updateBuilding($idBuilding)
 	{
 		$this->allowTo('1');
-		var_dump($idBuilding);
 		$this->show('admin/updateBuilding');
 	}
 
@@ -68,7 +66,6 @@ class AdminController extends Controller
 	{
 		$param_manager = new ParamModel();
 		$param = $param_manager->findAll();
-		var_dump($_POST);
 
 		if (!empty($_POST)) {
 			// Changement de la vitesse global du jeu
