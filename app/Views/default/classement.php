@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-9 col-md-offset-3">
                 <h2>Classement</h2><br>
-                <table class="table">
+                <table class="table" id="userList">
                     <thead>
                         <tr>
                             <th>Place</th>
