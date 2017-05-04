@@ -74,8 +74,7 @@ header {
 
 #game-board {
 	margin: 0 auto;
-	background-color: black;
-	opacity: 0.7;
+	background-color: rgba(0,0, 0, 0.7);
 	border-radius: 2%;
 }
 
@@ -141,9 +140,9 @@ header {
 }
 
 #userList{
-	background-color: black;
-	opacity: 0.7;
+	background-color: rgba(0,0, 0, 0.7);
 	border-radius: 2%;
+	padding: 2%;
 }
 #logo {
 	margin: auto;
@@ -151,4 +150,42 @@ header {
 
 .explo {
 	margin: 0;
+}
+.batiment{
+	display: block;
+	margin: auto;
+}
+
+progress.barre{
+	/* Turns off styling - not usually needed, but good to know. */
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+
+	/* gets rid of default border in Firefox and Opera. */ 
+	border: none;
+	
+	/* Dimensions */
+	height: 35px;
+	position: relative;
+
+}
+progress.barre[role]:after {
+	background-image: none; /* removes default background from polyfill */
+}
+progress.barre::-webkit-progress-bar {
+    background: url(../img/barre-sat.png);
+}
+progress.barre:not(value)::-moz-progress-bar { 
+	background: url(../img/barre.png);	
+}
+
+/* Chrome */
+progress.barre:not(value)::-webkit-progress-value {
+	background: url(../img/barre.png) !important;	
+}
+
+/* Polyfill */
+progress:not(value)  {
+	background: url(../img/barre.png) !important;	
 }
