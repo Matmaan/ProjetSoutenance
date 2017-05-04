@@ -76,3 +76,29 @@ header {
 .ress ul {
 	list-style-type: none;
 }
+
+.header img {
+	margin: auto; 
+}
+
+.header {
+	background-color: grey;
+	margin: 0!important;
+	width: 100%;
+	background-image: url(../img/brouillard.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.navbar {
+	background-color: silver;
+}
+
+#menu ul li a {
+	color: black;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+	background-color: #915e36;
+	color: white!important;
+}

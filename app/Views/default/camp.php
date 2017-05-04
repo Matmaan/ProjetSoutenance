@@ -94,9 +94,9 @@
                 </div>
             </div>
         </div>
-    <!-- </div> -->
+    </div>
         <!--batiment 4-->
-    <!-- <div class="row"> -->
+    <div class="row">
         </br>
         <div class="col-lg-4 col-md-6 col-sm-6 col-xs-8">
             <div class="media">
@@ -180,10 +180,10 @@
             </div>
             </div>
         </div>
-    <!-- </div> -->
+    </div>
         <!--batiment 7 -->
     </br>
-    <!-- <div class="row"> -->
+    <div class="row">
         <div class="col-lg-4 col-md-6 col-sm-6 col-xs-8">
             <div class="media">
             <img class="d-flex mr-3" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
