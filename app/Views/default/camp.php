@@ -89,7 +89,6 @@
                     <?php endif ?>
                 </div>
             </div>
-        </div>
     </div> 
     </div>
         <!--batiment 4-->
