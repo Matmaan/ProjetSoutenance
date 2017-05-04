@@ -40,6 +40,13 @@
 
 			</ul>
 
+			<ul class="nav navbar-nav ressources">
+				<li><a><img src="<?= $this->assetUrl('/img/wood.png'); ?>" alt="">Bois : <?php echo $_SESSION["ressources"]->wood; ?> </a></li>
+				<li><a><img src="<?= $this->assetUrl('/img/food.png'); ?>" alt="">Nourriture : <?php echo $_SESSION["ressources"]->food; ?> </a></li>
+				<li><a><img src="<?= $this->assetUrl('/img/water.png'); ?>" alt="">Eau : <?php echo $_SESSION["ressources"]->water; ?></a></li>
+				<li><a><img src="<?= $this->assetUrl('/img/camper.png'); ?>" alt="">Campers : <?php echo $_SESSION["ressources"]->camper; ?></a></li>
+			</ul>
+
 			<ul class="nav navbar-nav navbar-right">
 				<?php if ($w_user) { // si l'utilisateur est connecté ?>
 					<li <?= ($w_current_route == 'default_camp') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('default_camp'); ?>">Camp</a></li>

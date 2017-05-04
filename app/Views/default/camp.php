@@ -8,16 +8,6 @@
 
 <?php endif; ?>
 <div class="container" id="game-board">
-    <div class="row">
-        <div class="ress col-md-12 text-center col-xs-12">
-            <ul class="">
-                <li class="col-md-3 col-xs-6">Bois : <?php echo $_SESSION["ressources"]->wood; ?></li>
-                <li class="col-md-3 col-xs-6">Nourriture : <?php echo $_SESSION["ressources"]->food; ?></li>
-                <li class="col-md-3 col-xs-6">Eau : <?php echo $_SESSION["ressources"]->water; ?></li>
-                <li class="col-md-3 col-xs-6">Campers : <?php echo $_SESSION["ressources"]->camper; ?></li>
-            </ul>
-        </div>
-    </div>
     <h1 class="text-center">Campement</h1>
         <!--batiment 1-->
     </br>
