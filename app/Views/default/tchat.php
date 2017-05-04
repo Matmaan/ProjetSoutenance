@@ -56,6 +56,15 @@
             
             // Ajoute un message dans la page
             function insereMessage(pseudo, message) {
+                var insultes =['con','connard','merde','pd','salope','petasse','pute','putain','bite','abruti','enculer','enculé','enculay','tg','ntm','batard','bougnoul','bougnoule','boukak','branleur','fdp','garce'];
+                var words = message.split(' ');
+                for(word in words){
+                    var found = insultes.includes(words[word].toLowerCase());
+                    if(found){
+                        words[word]='****';
+                    }
+                }
+                message = words.join(' ');
                 $('#zone_chat').prepend('<p><strong>' + pseudo + '</strong> ' + message + '</p>');
             }
         </script>
