@@ -56,11 +56,6 @@
 
 
 	<?= $this->section('main_content') ?>
-<<<<<<< HEAD
-=======
-
-	
->>>>>>> 4d78d175f855da2e7436f10122192c5cb02fbbe1
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="<?= $this->assetUrl('js/app.js'); ?>"></script>
 </body>

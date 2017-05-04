@@ -1,7 +1,7 @@
 <?php $this->layout('layout', ['title' => 'Tchat']) ?>
 
 <?php $this->start('main_content') ?>
-        <div class="col-md-6 col-md-offset-6">
+        <div class="col-md-6 col-md-offset-3">
             <h1 class="text-center">Feu de camps</h1>
 
 
@@ -20,7 +20,7 @@
         <script>
 
             // Connexion à socket.io
-            var socket = io.connect('localhost:3000');
+            var socket = io.connect('192.168.1.138:3000');
             // On demande le pseudo, on l'envoie au serveur et on l'affiche dans le titre
             
             var pseudo = "<?php echo $_SESSION['user']['username'];?>";
