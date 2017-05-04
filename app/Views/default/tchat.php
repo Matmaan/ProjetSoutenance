@@ -12,7 +12,7 @@
                         <form action="/" method="post" id="formulaire_chat">
                 <div class="form-group">
                 <input type="text" name="message" id="message" placeholder="Votre message..."  class=" btn-default form-control"size="50" autocomplete="off" autofocus />
-                <input type="submit" id="envoi_message" value="Envoyer"class="btn btn-default form-control" />
+                <!--<input type="submit" id="envoi_message" value="Envoyer"class="btn btn-default form-control" />-->
             </form>
         </div>
         <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
@@ -42,10 +42,16 @@
             // Lorsqu'on envoie le formulaire, on transmet le message et on l'affiche sur la page
             $('#formulaire_chat').submit(function () {
                 var message = $('#message').val();
-                socket.emit('message', message); // Transmet le message aux autres
-                insereMessage(pseudo+" :", message); // Affiche le message aussi sur notre page
-                $('#message').val('').focus(); // Vide la zone de Chat et remet le focus dessus
-                return false; // Permet de bloquer l'envoi "classique" du formulaire
+                if($('#message').val() == 0){
+                    $('#message').val('').focus();
+                    return false;                  
+                }
+                else{
+                    socket.emit('message', message); // Transmet le message aux autres
+                    insereMessage(pseudo+" :", message); // Affiche le message aussi sur notre page
+                    $('#message').val('').focus(); // Vide la zone de Chat et remet le focus dessus
+                    return false; // Permet de bloquer l'envoi "classique" du formulaire
+                }
             });
             
             // Ajoute un message dans la page

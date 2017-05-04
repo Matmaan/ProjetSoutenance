@@ -35,6 +35,7 @@
 			<?php else: ?>
 				<!-- Utilisateur non connecté -->
 				<li <?= ($w_current_route == 'user_login') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('user_login'); ?>">Accueil</a></li>
+				<li <?= ($w_current_route == 'default_wiki') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('default_wiki'); ?>">Bien débuter</a></li>
 			<?php endif; ?>
 
 				<li <?= ($w_current_route == 'default_classement') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('default_classement',['page'=>1]); ?>">Classement</a></li>
