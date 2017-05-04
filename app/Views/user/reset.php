@@ -6,7 +6,7 @@
     <!-- Récupere le l'identifiant de l'utilisateur -->
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-md-offset-6">
+            <div class="col-md-6 col-md-offset-3">
                 <form action="" method="POST">
                     <div class="form-group">
                         <label for="login">Entrez votre pseudo ou adresse email :</label>
@@ -36,7 +36,7 @@
     <!-- Récupére le nouveau mot de passe -->
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-md-offset-6">
+            <div class="col-md-6 col-md-offset-3">
                 <h3>Veuillez entrer un nouveau mot de passe</h3><br>
                 <form action="" method="POST">
                     <div class="form-group">
