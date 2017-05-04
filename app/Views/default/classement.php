@@ -3,7 +3,7 @@
 <?php $this->start('main_content') ?>
     <div class="container" style="">
         <h2>Classement</h2><br>
-        <table class="table">
+        <table class="table" id="userList">
             <thead>
                 <tr>
                     <th>Place</th>
