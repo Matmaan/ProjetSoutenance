@@ -12,7 +12,7 @@
 <body>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<header>
-		<img src="../public/assets/img/LOGO_Campeurs_VS_Zombies.png" alt="logo" class="img-responsive" id="logo">
+		<img src="<?= $this->assetUrl('img/LOGO_Campeurs_VS_Zombies.png') ?>" alt="logo" class="img-responsive" id="logo">
 	</header>
 	<nav class="navbar navbar-inverse">
 		<div class="navbar-header">
@@ -56,11 +56,6 @@
 
 
 	<?= $this->section('main_content') ?>
-<<<<<<< HEAD
-=======
-
-	
->>>>>>> 4d78d175f855da2e7436f10122192c5cb02fbbe1
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="<?= $this->assetUrl('js/app.js'); ?>"></script>
 </body>
