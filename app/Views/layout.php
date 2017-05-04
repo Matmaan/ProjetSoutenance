@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<link rel="icon" type="image/png" href="<?= $this->assetUrl('img/favicon.ico')?>">
 </head>
 <body>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
