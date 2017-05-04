@@ -20,7 +20,7 @@
         <script>
 
             // Connexion à socket.io
-            var socket = io.connect('localhost:3000');
+            var socket = io.connect('192.168.1.138:3000');
             // On demande le pseudo, on l'envoie au serveur et on l'affiche dans le titre
             
             var pseudo = "<?php echo $_SESSION['user']['username'];?>";
@@ -43,7 +43,7 @@
             $('#formulaire_chat').submit(function () {
                 var message = $('#message').val();
                 socket.emit('message', message); // Transmet le message aux autres
-                insereMessage(pseudo, message); // Affiche le message aussi sur notre page
+                insereMessage(pseudo+" :", message); // Affiche le message aussi sur notre page
                 $('#message').val('').focus(); // Vide la zone de Chat et remet le focus dessus
                 return false; // Permet de bloquer l'envoi "classique" du formulaire
             });
