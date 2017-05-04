@@ -65,6 +65,7 @@
                     }
                 }
                 message = words.join(' ');
+                $('#zone_chat').prepend('<p><strong>' + pseudo + '</strong> ' + message + '</p>');
             }
         </script>
 <?php $this->stop('main_content') ?>
