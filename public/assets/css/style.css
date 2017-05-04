@@ -82,6 +82,7 @@ header {
 	list-style-type: none;
 }
 
+<<<<<<< HEAD
 .btn-success{
 	background-color: transparent;
 	border: 2px solid white;
@@ -95,4 +96,30 @@ header {
 .btn-success:focus{
 	background-color: #654227;
 	border: 2px solid #301d16;
+=======
+.header img {
+	margin: auto; 
+}
+
+.header {
+	background-color: grey;
+	margin: 0!important;
+	width: 100%;
+	background-image: url(../img/brouillard.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.navbar {
+	background-color: silver;
+}
+
+#menu ul li a {
+	color: black;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+	background-color: #915e36;
+	color: white!important;
+>>>>>>> 4d78d175f855da2e7436f10122192c5cb02fbbe1
 }

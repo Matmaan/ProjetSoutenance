@@ -7,12 +7,16 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
 	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <body>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<header>
 		<img src="../public/assets/img/LOGO_Campeurs_VS_Zombies.png" alt="logo" class="img-responsive" id="logo">
 	</header>
+	<div class="container header" style="margin: 0 auto;">
+		<img src="../public/assets/img/LOGO_Campeurs_VS_Zombies.png" alt="logo" class="img-responsive logoTop text-center" id="logo">
+	</div>
 	<nav class="navbar navbar-inverse">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
@@ -38,7 +42,7 @@
 				<li <?= ($w_current_route == 'default_classement') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('default_classement',['page'=>1]); ?>">Classement</a></li>
 
 			</ul>
-			
+
 			<ul class="nav navbar-nav navbar-right">
 				<?php if ($w_user) { // si l'utilisateur est connecté ?>
 					<li <?= ($w_current_route == 'default_camp') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('default_camp'); ?>">Camp</a></li>
@@ -55,6 +59,11 @@
 
 
 	<?= $this->section('main_content') ?>
+<<<<<<< HEAD
+=======
+
+	
+>>>>>>> 4d78d175f855da2e7436f10122192c5cb02fbbe1
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="<?= $this->assetUrl('js/app.js'); ?>"></script>
 </body>
