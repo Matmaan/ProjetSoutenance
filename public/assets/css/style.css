@@ -168,6 +168,9 @@ progress.barre{
 	
 	/* Dimensions */
 	height: 35px;
+	width: 330px;
+	display: block;
+	margin:auto;
 	position: relative;
 
 }
