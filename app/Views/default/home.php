@@ -1,6 +1,7 @@
 <?php $this->layout('layout', ['title' => 'Connexion']) ?>
 
 <?php $this->start('main_content'); ?>
+    <h1>Connexion</h1>
     <form action="" method="POST">
         <div class="form-group">
             <label>Votre pseudo ou votre email :</label>

@@ -12,18 +12,18 @@
         <!--batiment 1-->
     </br>
     <div class="row">
-        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-8">
+        <div class="batiment col-lg-4 col-md-6 col-sm-6">
             <div class="media">
             <img class="d-flex mr-3 img-responsive" src="assets/img/bucheron.jpg" alt="Generic placeholder image">
             <div class="media-body">
                 <h5 class="mt-0 text-left"><strong>Camp de bûcheron</strong> Niveau : <?php echo $_SESSION["buildings"]->wood_farm; ?></h5>
 
                 Le camp de bûcheron vous permettra d'enrichir votre camp en bois, une ressource essentielle à la survie de votre camp. 
-                <p>Prix : <?php echo $bucheron->GetPrixBois(); ?> bois</p>
+                <p class="text-right">Prix : <?php echo $bucheron->GetPrixBois(); ?> bois</p>
 
                 <?php if(empty($_SESSION["construct"]->wood_farm)):?>
                     <?php if($bucheron->action == 1): ?>
-                        <a class='btn btn-success btn-block' href='<?=$this->url('default_upgrade',['idBuilding'=>2])?>'>Construire</a>
+                        <a class='btn' href='<?=$this->url('default_upgrade',['idBuilding'=>2])?>'><img src="<?= $this->assetUrl('/img/button.png'); ?>" alt=""></a>
                     <?php endif ?>
                 <?php else:?>
                     <div><?php echo $bucheron->barre ?></div>
@@ -33,7 +33,7 @@
             </div>
         </div>
         <!--batiment 2-->
-        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-8">
+        <div class="batiment col-lg-4 col-md-6 col-sm-6">
             <div class="media">
             <img class="d-flex mr-3 img-responsive" src="assets/img/farm.jpg" alt="Generic placeholder image">
             <div class="media-body">
@@ -46,7 +46,7 @@
 
                 <?php if(empty($_SESSION["construct"]->food_farm)):?>
                     <?php if($ferme->action == 1): ?>
-                        <a class='btn btn-success btn-block' href='<?=$this->url('default_upgrade',['idBuilding'=>3])?>'>Construire</a>
+                        <a class='btn' href='<?=$this->url('default_upgrade',['idBuilding'=>3])?>'><img src="<?= $this->assetUrl('/img/button.png'); ?>" alt=""></a>
                     <?php endif ?>
                 <?php else:?>
                     <div><?php echo $ferme->barre ?></div>
@@ -57,7 +57,7 @@
             </div>
         </div>
         <!--batiment 3-->
-        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-8">
+        <div class="batiment col-lg-4 col-md-6 col-sm-6">
             <div class="media">
                 <img class="d-flex mr-3 img-responsive" src="assets/img/puit.jpg" alt="Generic placeholder image">
                 <div class="media-body">
@@ -71,7 +71,7 @@
 
                     <?php if(empty($_SESSION["construct"]->water_farm)):?>
                         <?php if($puit->action == 1): ?>
-                            <a class='btn btn-success btn-block' href='<?=$this->url('default_upgrade',['idBuilding'=>4])?>'>Construire</a>
+                            <a class='btn' href='<?=$this->url('default_upgrade',['idBuilding'=>4])?>'><img src="<?= $this->assetUrl('/img/button.png'); ?>" alt=""></a>
                         <?php endif ?>
                     <?php else:?>
                         <div><?php echo $puit->barre ?></div>
@@ -85,7 +85,7 @@
         <!--batiment 4-->
     <div class="row">
         </br>
-        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-8">
+        <div class="batiment col-lg-4 col-md-6 col-sm-6">
             <div class="media">
             <img class="d-flex mr-3 img-responsive" src="assets/img/hangar.jpg" alt="Generic placeholder image">
             <div class="media-body">
@@ -98,7 +98,7 @@
 
                 <?php if(empty($_SESSION["construct"]->wood_stock)):?>
                     <?php if($hangar->action == 1): ?>
-                        <a class='btn btn-success btn-block' href='<?=$this->url('default_upgrade',['idBuilding'=>5])?>'>Construire</a>
+                        <a class='btn' href='<?=$this->url('default_upgrade',['idBuilding'=>5])?>'><img src="<?= $this->assetUrl('/img/button.png'); ?>" alt=""></a>
                     <?php endif ?>
                 <?php else:?>
                     <div>
@@ -112,7 +112,7 @@
             </div>
         </div>
         <!--batiment 5-->
-        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-8">
+        <div class="batiment col-lg-4 col-md-6 col-sm-6">
             <div class="media">
             <img class="d-flex mr-3 img-responsive" src="assets/img/stockpile.jpg" alt="Generic placeholder image">
             <div class="media-body">
@@ -124,7 +124,7 @@
 
                 <?php if(empty($_SESSION["construct"]->food_stock)):?>
                     <?php if($garde_manger->action == 1): ?>
-                        <a class='btn btn-success btn-block' href='<?=$this->url('default_upgrade',['idBuilding'=>6])?>'>Construire</a>
+                        <a class='btn' href='<?=$this->url('default_upgrade',['idBuilding'=>6])?>'><img src="<?= $this->assetUrl('/img/button.png'); ?>" alt=""></a>
                     <?php endif ?>
                 <?php else:?>
                     <div><?php echo $garde_manger->barre ?></div>
@@ -136,7 +136,7 @@
             </div>
         </div>
         <!--batiment 6-->
-        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-8">
+        <div class="batiment col-lg-4 col-md-6 col-sm-6">
             <div class="media">
             <img class="d-flex mr-3 img-responsive" src="assets/img/citerne.jpg" alt="Generic placeholder image">
             <div class="media-body">
@@ -150,7 +150,7 @@
 
                     <?php if(empty($_SESSION["construct"]->water_stock)):?>
                         <?php if($citerne->action == 1): ?>
-                            <a class='btn btn-success btn-block' href='<?=$this->url('default_upgrade',['idBuilding'=>7])?>'>Construire</a>
+                            <a class='btn' href='<?=$this->url('default_upgrade',['idBuilding'=>7])?>'><img src="<?= $this->assetUrl('/img/button.png'); ?>" alt=""></a>
                         <?php endif ?>
                     <?php else:?>
                         <div class="compteurdiv"><?php echo $citerne->barre ?>
@@ -165,7 +165,7 @@
         <!--batiment 7 -->
     </br>
     <div class="row">
-        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-8">
+        <div class="batiment col-lg-4 col-md-6 col-sm-6">
             <div class="media">
             <img class="d-flex mr-3 img-responsive" src="assets/img/cabane.jpg" alt="Generic placeholder image">
             <div class="media-body">
@@ -179,7 +179,7 @@
 
                 <?php if(empty($_SESSION["construct"]->cabanon)):?>
                     <?php if($cabane->action == 1): ?>
-                        <a class='btn btn-success btn-block' href='<?=$this->url('default_upgrade',['idBuilding'=>8])?>'>Construire</a>
+                        <a class='btn' href='<?=$this->url('default_upgrade',['idBuilding'=>8])?>'><img src="<?= $this->assetUrl('/img/button.png'); ?>" alt=""></a>
                     <?php endif ?>
                 <?php else:?>
                     <div><?php echo $cabane->barre ?></div>
@@ -191,7 +191,7 @@
             </div>
         </div>
         <!--batiment 8-->
-        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-8">
+        <div class="batiment col-lg-4 col-md-6 col-sm-6">
             <div class="media">
             <img class="d-flex mr-3 img-responsive" src="assets/img/radio.jpg" alt="Generic placeholder image">
             <div class="media-body">
@@ -205,7 +205,7 @@
 
                 <?php if(empty($_SESSION["construct"]->radio)):?>
                     <?php if($radio->action == 1): ?>
-                        <a class='btn btn-success btn-block' href='<?=$this->url('default_upgrade',['idBuilding'=>9])?>'>Construire</a>
+                        <a class='btn' href='<?=$this->url('default_upgrade',['idBuilding'=>9])?>'><img src="<?= $this->assetUrl('/img/button.png'); ?>" alt=""></a>
                     <?php endif ?>
                 <?php else:?>
                     <div><?php echo $radio->barre ?></div>
@@ -217,7 +217,7 @@
             </div>
         </div>
         <!--batiment 9-->
-        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-8">
+        <div class="batiment col-lg-4 col-md-6 col-sm-6">
             <div class="media">
             <img class="d-flex mr-3 img-responsive" src="assets/img/mur.jpg" alt="Generic placeholder image">
             <div class="media-body">
@@ -232,7 +232,7 @@
 
                 <?php if(empty($_SESSION["construct"]->wall)):?>
                     <?php if($mur->action == 1): ?>
-                        <a class='btn btn-success btn-block' href='<?=$this->url('default_upgrade',['idBuilding'=>10])?>'>Construire</a>
+                        <a class='btn' href='<?=$this->url('default_upgrade',['idBuilding'=>10])?>'><img src="<?= $this->assetUrl('/img/button.png'); ?>" alt=""></a>
                     <?php endif ?>
                 <?php else:?>
                     <div><?php echo $mur->barre ?></div>

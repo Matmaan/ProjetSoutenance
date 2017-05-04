@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-4">
-                <h2>Classement</h2><br>
+                <h1 class="text-center">Classement</h1><br>
                 <table class="table" id="userList">
                     <thead>
                         <tr>
