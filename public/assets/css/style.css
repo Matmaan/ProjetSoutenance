@@ -156,6 +156,18 @@ header {
 	display: block;
 	margin: auto;
 }
+footer{
+	background: black;
+	position:fixed;
+   	left:0px;
+   	bottom:0px;
+   	height:30px;
+   	width:100%;
+}
+.scroll{
+	z-index: 1;
+	width:100%;
+}
 
 progress.barre{
 	/* Turns off styling - not usually needed, but good to know. */
