@@ -203,7 +203,7 @@ class DefaultModel extends \W\Model\Model {
 			$('#bar".$id."').attr( 'value', calcul3".$id.");
 			 var date".$id." = new Date(null);
 			 result".$id." = date".$id.".setSeconds(timer".$id.");
-			 $('#time".$id."').html(result".$id.");
+			 // $('#time".$id."').html(result".$id.");
 		});
 		var barre".$id." = setInterval(function(){ myTimer".$id."() }, 1000);
 		function StopFunction".$id."() {

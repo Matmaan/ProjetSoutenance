@@ -167,7 +167,7 @@ progress.barre{
 	border: none;
 	
 	/* Dimensions */
-	height: 35px;
+	height: 34px;
 	width: 330px;
 	display: block;
 	margin:auto;
@@ -197,4 +197,7 @@ progress:not(value)  {
 .mr-3 {
 	filter: grayscale();
 
+}
+.compteur{
+	height: 20px;
 }

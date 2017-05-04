@@ -37,8 +37,8 @@
                         <a class='btn' href='<?=$this->url('default_upgrade',['idBuilding'=>2])?>'><img src="<?= $this->assetUrl('/img/button.png'); ?>" alt=""></a>
                     <?php endif ?>
                 <?php else:?>
-                    <div><?php echo $bucheron->barre ?></div>
-                        <div class="compteur" id="time<?php echo $bucheron->id ?>"></div>
+                    <p style="text-align: right;" class="compteur" id="time<?php echo $bucheron->id ?>"></p>
+                    <a class='btn'><?php echo $bucheron->barre ?></a>
                 <?php endif ?>
             </div>
             </div>
@@ -71,8 +71,8 @@
                         <a class='btn' href='<?=$this->url('default_upgrade',['idBuilding'=>3])?>'><img src="<?= $this->assetUrl('/img/button.png'); ?>" alt=""></a>
                     <?php endif ?>
                 <?php else:?>
-                    <div><?php echo $ferme->barre ?></div>
-                        <div class="compteur" id="time<?php echo $ferme->id ?>"></div>
+                    <p style="text-align: right;" class="compteur" id="time<?php echo $ferme->id ?>"></p>
+                    <a class='btn'><?php echo $ferme->barre ?></a>
                 <?php endif ?>
 
             </div>
@@ -107,8 +107,8 @@
                             <a class='btn' href='<?=$this->url('default_upgrade',['idBuilding'=>4])?>'><img src="<?= $this->assetUrl('/img/button.png'); ?>" alt=""></a>
                         <?php endif ?>
                     <?php else:?>
-                        <div><?php echo $puit->barre ?></div>
-                        <div class="compteur" id="time<?php echo $puit->id ?>"></div>
+                        <p style="text-align: right;" class="compteur" id="time<?php echo $puit->id ?>"></p>
+                        <a class='btn'><?php echo $puit->barre ?></a>
                     <?php endif ?>
                 </div>
             </div>
@@ -183,8 +183,8 @@
                         <a class='btn' href='<?=$this->url('default_upgrade',['idBuilding'=>6])?>'><img src="<?= $this->assetUrl('/img/button.png'); ?>" alt=""></a>
                     <?php endif ?>
                 <?php else:?>
-                    <div><?php echo $garde_manger->barre ?></div>
-                        <div class="compteur" id="time<?php echo $garde_manger->id ?>"></div>
+                    <p style="text-align: right;" class="compteur" id="time<?php echo $garde_manger->id ?>"></p>
+                    <a class='btn'><?php echo $garde_manger->barre ?></a>
                 <?php endif ?>
 
                 <div ></div>
@@ -220,8 +220,8 @@
                             <a class='btn' href='<?=$this->url('default_upgrade',['idBuilding'=>7])?>'><img src="<?= $this->assetUrl('/img/button.png'); ?>" alt=""></a>
                         <?php endif ?>
                     <?php else:?>
-                        <div class="compteurdiv"><?php echo $citerne->barre ?>
-                            <div class="compteur" id="time<?php echo $citerne->id ?>"></div>
+                        <p style="text-align: right;" class="compteur" id="time<?php echo $water_stock->id ?>"></p>
+                        <a class='btn'><?php echo $water_stock->barre ?></a>
                         </div>
                     <?php endif ?>
                 <div ></div>
@@ -260,8 +260,8 @@
                         <a class='btn' href='<?=$this->url('default_upgrade',['idBuilding'=>8])?>'><img src="<?= $this->assetUrl('/img/button.png'); ?>" alt=""></a>
                     <?php endif ?>
                 <?php else:?>
-                    <div><?php echo $cabane->barre ?></div>
-                        <div class="compteur" id="time<?php echo $cabane->id ?>"></div>
+                    <p style="text-align: right;" class="compteur" id="time<?php echo $cabanon->id ?>"></p>
+                    <a class='btn'><?php echo $cabanon->barre ?></a>
                 <?php endif ?>
 
                 <div ></div>
@@ -297,8 +297,8 @@
                         <a class='btn' href='<?=$this->url('default_upgrade',['idBuilding'=>9])?>'><img src="<?= $this->assetUrl('/img/button.png'); ?>" alt=""></a>
                     <?php endif ?>
                 <?php else:?>
-                    <div><?php echo $radio->barre ?></div>
-                        <div class="compteur" id="time<?php echo $radio->id ?>"></div>
+                    <p style="text-align: right;" class="compteur" id="time<?php echo $radio->id ?>"></p>
+                    <a class='btn'><?php echo $radio->barre ?></a>
                 <?php endif ?>
 
                 <div></div>
@@ -335,8 +335,8 @@
                         <a class='btn' href='<?=$this->url('default_upgrade',['idBuilding'=>10])?>'><img src="<?= $this->assetUrl('/img/button.png'); ?>" alt=""></a>
                     <?php endif ?>
                 <?php else:?>
-                    <div><?php echo $mur->barre ?></div>
-                        <div class="compteur" id="time<?php echo $mur->id ?>"></div>
+                    <p style="text-align: right;" class="compteur" id="time<?php echo $mur->id ?>"></p>
+                    <a class='btn'><?php echo $mur->barre ?></a>
                 <?php endif ?>
 
                 <div></div>
