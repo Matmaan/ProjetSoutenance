@@ -2,24 +2,29 @@
 
 <?php $this->start('main_content') ?>
 
-<div class="prof col-md-6 col-md-offset-3">
-	<h1>Hello <?=$w_user['username']?></h1>
 
-	<h2>Vos informations :</h2>
-	</br>
-	<p>Votre pseudo : <?=$w_user['username']?></p>
-	<p>Votre adresse Email : <?=$w_user['email']?></p>
-	<p>Date de création de votre compte : <?=$w_user['date_create']?></p>
-	<p>Date de derniere connexion : <?=date('Y-m-d H:i:s', $w_user['date_last_connexion'])?></p>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<h1>Hello <?=$w_user['username']?></h1>
 
-	<a class="btn btn-default" href="<?=$this->url('user_update')?>">Modifier mes informations</a>
+			<h2>Vos informations :</h2>
+			</br>
+			<p>Votre pseudo : <?=$w_user['username']?></p>
+			<p>Votre adresse Email : <?=$w_user['email']?></p>
+			<p>Date de création de votre compte : <?=$w_user['date_create']?></p>
+			<p>Date de derniere connexion : <?=date('Y-m-d H:i:s', $w_user['date_last_connexion'])?></p>
 
-	<?php if ($w_user['role'] == 1): ?>
-	    <h2>Fonction administrateur :</h2></br>
+			<a class="btn btn-default" href="<?=$this->url('user_update')?>">Modifier mes informations</a>
 
-	    <p><a href="<?=$this->url('admin_users')?>">Liste des utilisateurs</a></p>
+			<?php if ($w_user['role'] == 1): ?>
+			    <h2>Fonction administrateur :</h2></br>
 
-	    <p><a href="<?=$this->url('admin_parameters')?>">Paramètres de la partie</a></p>
-	<?php endif; ?>
+			    <p><a href="<?=$this->url('admin_users')?>">Liste des utilisateurs</a></p>
+
+			    <p><a href="<?=$this->url('admin_parameters')?>">Paramètres de la partie</a></p>
+			<?php endif; ?>
+		</div>
+	</div>
 </div>
 <?php $this->stop('main_content') ?>
