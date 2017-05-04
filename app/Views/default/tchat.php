@@ -43,7 +43,7 @@
             $('#formulaire_chat').submit(function () {
                 var message = $('#message').val();
                 socket.emit('message', message); // Transmet le message aux autres
-                insereMessage(pseudo, message); // Affiche le message aussi sur notre page
+                insereMessage(pseudo+" :", message); // Affiche le message aussi sur notre page
                 $('#message').val('').focus(); // Vide la zone de Chat et remet le focus dessus
                 return false; // Permet de bloquer l'envoi "classique" du formulaire
             });

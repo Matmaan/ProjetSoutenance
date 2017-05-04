@@ -2,7 +2,7 @@
 
 <?php $this->start('main_content') ?>
 <div class="row">
-    <div class="col-md-8 col-md-offset-4">
+    <div class="col-md-8 col-md-offset-2">
 
         <h2 class="text-center">Changer les paramètres du serveur</h2><br>
         <form method="POST">

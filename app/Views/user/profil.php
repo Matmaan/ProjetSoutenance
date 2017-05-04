@@ -18,8 +18,6 @@
 
     <p><a href="<?=$this->url('admin_users')?>">Liste des utilisateurs</a></p>
 
-    <p><a href="<?=$this->url('admin_buildings')?>">Liste des batiments</a></p>
-
     <p><a href="<?=$this->url('admin_parameters')?>">Paramètres de la partie</a></p>
 <?php endif; ?>
 
