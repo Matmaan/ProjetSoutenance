@@ -24,14 +24,12 @@
     <div class="row">
         <div class="col-lg-4 col-md-6 col-sm-6 col-xs-8">
             <div class="media">
-            <img class="d-flex mr-3" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
+            <img class="d-flex mr-3 img-responsive" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
             <div class="media-body">
                 <h5 class="mt-0 text-left"><strong>Camp de bûcheron</strong> Niveau : <?php echo $_SESSION["buildings"]->wood_farm; ?></h5>
 
-                Le camp de bûcheron vous permettra d'enrichir votre camp en bois, une ressource essentielle à la survie de votre camp. Le bois étant la ressource base pour toute les constructions.
-
+                Le camp de bûcheron vous permettra d'enrichir votre camp en bois, une ressource essentielle à la survie de votre camp. 
                 <p>Prix : <?php echo $bucheron->GetPrixBois(); ?> bois</p>
-                <a class="btn btn-primary btn-block" href="<?=$this->url('default_building',['idBuilding'=>2])?>">Voir</a>
 
                 <?php if(empty($_SESSION["construct"]->wood_farm)):?>
                     <?php if($bucheron->action == 1): ?>
@@ -47,15 +45,14 @@
         <!--batiment 2-->
         <div class="col-lg-4 col-md-6 col-sm-6 col-xs-8">
             <div class="media">
-            <img class="d-flex mr-3" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
+            <img class="d-flex mr-3 img-responsive" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
             <div class="media-body">
                 <h5 class="mt-0 text-left"><strong>Ferme</strong> Niveau : <?php echo $_SESSION["buildings"]->food_farm; ?></h5>
 
-                Comment survivre sans manger ? Impossible ! Cette ferme vous aidera à faire prospérer votre campement dans la durée. Les zombies ne sont pas conseillé dans l'élevage.
+                Comment survivre sans manger ? Impossible ! Cette ferme vous aidera à faire prospérer votre campement dans la durée.
 
                 <p>Prix : <?php echo $ferme->GetPrixBois(); ?> Bois <?php echo $ferme->GetPrixNourriture(); ?> nourriture</p>
 
-                <a class="btn btn-primary btn-block" href="<?=$this->url('default_building',['idBuilding'=>3])?>">Voir</a>
 
                 <?php if(empty($_SESSION["construct"]->food_farm)):?>
                     <?php if($ferme->action == 1): ?>
@@ -72,7 +69,7 @@
         <!--batiment 3-->
         <div class="col-lg-4 col-md-6 col-sm-6 col-xs-8">
             <div class="media">
-                <img class="d-flex mr-3" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
+                <img class="d-flex mr-3 img-responsive" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
                 <div class="media-body">
                     <h5 class="mt-0 text-left"><strong>Puit</strong> Niveau : <?php echo $_SESSION["buildings"]->water_farm; ?></h5>
                     
@@ -81,7 +78,6 @@
                     <p>Prix : <?php echo $puit->GetPrixBois(); ?> bois <?php echo $puit->GetPrixNourriture(); ?> nourriture <?php echo $puit->GetPrixEau(); ?> eau</p>
 
 
-                    <a class="btn btn-primary btn-block" href="<?=$this->url('default_building',['idBuilding'=>4])?>">Voir</a>
 
                     <?php if(empty($_SESSION["construct"]->water_farm)):?>
                         <?php if($puit->action == 1): ?>
@@ -94,23 +90,21 @@
                 </div>
             </div>
         </div>
+    </div> 
     </div>
         <!--batiment 4-->
     <div class="row">
         </br>
         <div class="col-lg-4 col-md-6 col-sm-6 col-xs-8">
             <div class="media">
-            <img class="d-flex mr-3" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
+            <img class="d-flex mr-3 img-responsive" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
             <div class="media-body">
                 <h5 class="mt-0 text-left"><strong>Hangar</strong> Niveau : <?php echo $_SESSION["buildings"]->wood_stock; ?></h5>
 
-                Dans un monde post-apocalyptique il est évident que la richesse et le pouvoir passe par possession de ressource essentiel à la survie c'est pourquoi ce hangar vous aidera à stocker votre bois.
-
+                Dans un monde post-apocalyptique il est évident que la richesse et le pouvoir passe par possession de ressource essentiel.
 
                 <p>Prix : <?php echo $hangar->GetPrixBois(); ?> bois</p>
 
-
-                <a class="btn btn-primary btn-block" href="<?=$this->url('default_building',['idBuilding'=>5])?>">Voir</a>
 
                 <?php if(empty($_SESSION["construct"]->wood_stock)):?>
                     <?php if($hangar->action == 1): ?>
@@ -130,15 +124,13 @@
         <!--batiment 5-->
         <div class="col-lg-4 col-md-6 col-sm-6 col-xs-8">
             <div class="media">
-            <img class="d-flex mr-3" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
+            <img class="d-flex mr-3 img-responsive" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
             <div class="media-body">
                 <h5 class="mt-0 text-left"><strong>Garde manger</strong> Niveau : <?php echo $_SESSION["buildings"]->food_stock; ?></h5>
 
-                A défaut d'avoir un frigo et de l'électricité au bout du fil il faut prévoir un lieu pour stocker votre nourriture sachant qu'elle est très prisée des zombies et des autres camps.
-
+                A défaut d'avoir un frigo et de l'électricité au bout du fil il faut prévoir un lieu pour stocker votre nourriture.
                 <p>Prix : <?php echo $garde_manger->GetPrixBois(); ?> Bois <?php echo $garde_manger->GetPrixNourriture(); ?> nourriture</p>
 
-                <a class="btn btn-primary btn-block" href="<?=$this->url('default_building',['idBuilding'=>6])?>">Voir</a>
 
                 <?php if(empty($_SESSION["construct"]->food_stock)):?>
                     <?php if($garde_manger->action == 1): ?>
@@ -156,7 +148,7 @@
         <!--batiment 6-->
         <div class="col-lg-4 col-md-6 col-sm-6 col-xs-8">
             <div class="media">
-            <img class="d-flex mr-3" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
+            <img class="d-flex mr-3 img-responsive" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
             <div class="media-body">
                 <h5 class="mt-0 text-left"><strong>Citerne</strong> Niveau : <?php echo $_SESSION["buildings"]->water_stock; ?></h5>
 
@@ -165,7 +157,6 @@
                 <p>Prix : <?php echo $citerne->GetPrixBois(); ?> bois <?php echo $citerne->GetPrixNourriture(); ?> nourriture <?php echo $citerne->GetPrixEau(); ?> eau</p>
 
 
-                <a class="btn btn-primary btn-block" href="<?=$this->url('default_building',['idBuilding'=>7])?>">Voir</a>
 
                     <?php if(empty($_SESSION["construct"]->water_stock)):?>
                         <?php if($citerne->action == 1): ?>
@@ -186,7 +177,7 @@
     <div class="row">
         <div class="col-lg-4 col-md-6 col-sm-6 col-xs-8">
             <div class="media">
-            <img class="d-flex mr-3" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
+            <img class="d-flex mr-3 img-responsive" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
             <div class="media-body">
                 <h5 class="mt-0 text-left"><strong>Cabanon</strong> Niveau : <?php echo $_SESSION["buildings"]->cabanon; ?></h5>
 
@@ -195,7 +186,6 @@
                 <p>Prix : <?php echo $cabane->GetPrixBois(); ?> bois <?php echo $cabane->GetPrixNourriture(); ?> nourriture <?php echo $cabane->GetPrixEau(); ?> eau</p>
 
 
-                <a class="btn btn-primary btn-block" href="<?=$this->url('default_building',['idBuilding'=>8])?>">Voir</a>
 
                 <?php if(empty($_SESSION["construct"]->cabanon)):?>
                     <?php if($cabane->action == 1): ?>
@@ -213,7 +203,7 @@
         <!--batiment 8-->
         <div class="col-lg-4 col-md-6 col-sm-6 col-xs-8">
             <div class="media">
-            <img class="d-flex mr-3" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
+            <img class="d-flex mr-3 img-responsive" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
             <div class="media-body">
                 <h5 class="mt-0 text-left"><strong>Station de radio</strong> Niveau : <?php echo $_SESSION["buildings"]->radio; ?></h5>
 
@@ -222,7 +212,6 @@
                 <p>Prix : <?php echo $radio->GetPrixBois(); ?> bois <?php echo $radio->GetPrixNourriture(); ?> nourriture <?php echo $radio->GetPrixEau(); ?> eau</p>
 
 
-                <a class="btn btn-primary btn-block" href="<?=$this->url('default_building',['idBuilding'=>9])?>">Voir</a>
 
                 <?php if(empty($_SESSION["construct"]->radio)):?>
                     <?php if($radio->action == 1): ?>
@@ -240,7 +229,7 @@
         <!--batiment 9-->
         <div class="col-lg-4 col-md-6 col-sm-6 col-xs-8">
             <div class="media">
-            <img class="d-flex mr-3" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
+            <img class="d-flex mr-3 img-responsive" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
             <div class="media-body">
                 <h5 class="mt-0 text-left"><strong>Mur de defense</strong> Niveau : <?php echo $_SESSION["buildings"]->wall; ?></h5>
                 
@@ -249,7 +238,7 @@
                 <p>Prix : <?php echo $mur->GetPrixBois(); ?> bois <?php echo $mur->GetPrixNourriture(); ?> nourriture <?php echo $mur->GetPrixEau(); ?> eau</p>
 
 
-                <a class="btn btn-primary btn-block" href="<?=$this->url('default_building',['idBuilding'=>10])?>">Voir</a>
+               
 
                 <?php if(empty($_SESSION["construct"]->wall)):?>
                     <?php if($mur->action == 1): ?>

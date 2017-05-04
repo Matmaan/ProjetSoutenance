@@ -10,10 +10,10 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <body>
-	<div class="container header" style="margin: 0 auto;">
-		<img src="../public/assets/img/LOGO_Campeurs_VS_Zombies.png" alt="logo" class="img-responsive logoTop text-center" id="logo">
-	</div>
-
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<header>
+		<img src="../public/assets/img/LOGO_Campeurs_VS_Zombies.png" alt="logo" class="img-responsive" id="logo">
+	</header>
 	<nav class="navbar navbar-inverse">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
@@ -56,8 +56,11 @@
 
 
 	<?= $this->section('main_content') ?>
+<<<<<<< HEAD
+=======
 
 	
+>>>>>>> 4d78d175f855da2e7436f10122192c5cb02fbbe1
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="<?= $this->assetUrl('js/app.js'); ?>"></script>
 </body>
