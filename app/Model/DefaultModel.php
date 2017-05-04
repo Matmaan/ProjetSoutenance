@@ -140,7 +140,7 @@ class DefaultModel extends \W\Model\Model {
 		#bar".$id." {
 		margin-top: 7px; 
 		height: 30px; 
-		background: red; 
+		background: #b7b3ae; 
 		width: 0; 
 		transition: 1s; 
 	    }</style><script>

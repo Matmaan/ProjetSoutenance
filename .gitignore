@@ -1,0 +1,7 @@
+/vendor/
+app/config.php
+/phpDocumentor.phar
+/.phpintel/
+/.vscode/
+/node_modules/
+
