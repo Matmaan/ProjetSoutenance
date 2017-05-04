@@ -19,7 +19,7 @@
                 <h5 class="mt-0 text-left"><strong>Camp de bûcheron</strong> Niveau : <?php echo $_SESSION["buildings"]->wood_farm; ?></h5>
 
                 Le camp de bûcheron vous permettra d'enrichir votre camp en bois, une ressource essentielle à la survie de votre camp. 
-                <p>Prix : <?php echo $bucheron->GetPrixBois(); ?> bois</p>
+                <p class="text-right">Prix : <?php echo $bucheron->GetPrixBois(); ?> bois</p>
 
                 <?php if(empty($_SESSION["construct"]->wood_farm)):?>
                     <?php if($bucheron->action == 1): ?>
