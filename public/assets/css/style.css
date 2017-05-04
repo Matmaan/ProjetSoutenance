@@ -152,3 +152,7 @@ header {
 .explo {
 	margin: 0;
 }
+
+.mr-3 {
+	filter: grayscale();
+}

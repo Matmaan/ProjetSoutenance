@@ -45,10 +45,10 @@
 			</ul>
 			<?php if ($w_user) { ?>
 			<ul class="nav navbar-nav ressources">
-				<li><a><img src="<?= $this->assetUrl('/img/wood.png'); ?>" alt="">Bois : <?php echo $_SESSION["ressources"]->wood; ?> </a></li>
-				<li><a><img src="<?= $this->assetUrl('/img/food.png'); ?>" alt="">Nourritures : <?php echo $_SESSION["ressources"]->food; ?> </a></li>
-				<li><a><img src="<?= $this->assetUrl('/img/water.png'); ?>" alt="">Eaux : <?php echo $_SESSION["ressources"]->water; ?></a></li>
-				<li><a><img src="<?= $this->assetUrl('/img/camper.png'); ?>" alt="">Campers : <?php echo $_SESSION["ressources"]->camper; ?></a></li>
+				<li><a><img src="<?= $this->assetUrl('/img/wood.png'); ?>" alt=""> Bois : <?php echo $_SESSION["ressources"]->wood; ?> </a></li>
+				<li><a><img src="<?= $this->assetUrl('/img/food.png'); ?>" alt=""> Nourritures : <?php echo $_SESSION["ressources"]->food; ?> </a></li>
+				<li><a><img src="<?= $this->assetUrl('/img/water.png'); ?>" alt=""> Eaux : <?php echo $_SESSION["ressources"]->water; ?></a></li>
+				<li><a><img src="<?= $this->assetUrl('/img/camper.png'); ?>" alt=""> Campers : <?php echo $_SESSION["ressources"]->camper; ?></a></li>
 			</ul>
 			<?php } ?>
 
