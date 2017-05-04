@@ -32,6 +32,8 @@
 				<li <?= ($w_current_route == 'default_camp') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('default_camp'); ?>">Accueil</a></li>
 				<li <?= ($w_current_route == 'default_report') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('default_report'); ?>">Rapports<?=($_SESSION['newReport'] > 0)?"(".$_SESSION['newReport'].")":"";?></a></li>
 				<li <?= ($w_current_route == 'default_exploration') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('default_exploration'); ?>">Exploration</a></li>
+				<li <?= ($w_current_route == 'default_wiki') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('default_wiki'); ?>">Bien débuter</a></li>
+
 			<?php else: ?>
 				<!-- Utilisateur non connecté -->
 				<li <?= ($w_current_route == 'user_login') ? 'class="active"' : ''; ?>><a href="<?php echo $this->url('user_login'); ?>">Accueil</a></li>
@@ -43,10 +45,10 @@
 			</ul>
 			<?php if ($w_user) { ?>
 			<ul class="nav navbar-nav ressources">
-				<li><a><img src="<?= $this->assetUrl('/img/wood.png'); ?>" alt="">Bois : <?php echo $_SESSION["ressources"]->wood; ?> </a></li>
-				<li><a><img src="<?= $this->assetUrl('/img/food.png'); ?>" alt="">Nourritures : <?php echo $_SESSION["ressources"]->food; ?> </a></li>
-				<li><a><img src="<?= $this->assetUrl('/img/water.png'); ?>" alt="">Eaux : <?php echo $_SESSION["ressources"]->water; ?></a></li>
-				<li><a><img src="<?= $this->assetUrl('/img/camper.png'); ?>" alt="">Campers : <?php echo $_SESSION["ressources"]->camper; ?></a></li>
+				<li><a><img src="<?= $this->assetUrl('/img/wood.png'); ?>" alt=""> Bois : <?php echo $_SESSION["ressources"]->wood; ?> </a></li>
+				<li><a><img src="<?= $this->assetUrl('/img/food.png'); ?>" alt=""> Nourritures : <?php echo $_SESSION["ressources"]->food; ?> </a></li>
+				<li><a><img src="<?= $this->assetUrl('/img/water.png'); ?>" alt=""> Eaux : <?php echo $_SESSION["ressources"]->water; ?></a></li>
+				<li><a><img src="<?= $this->assetUrl('/img/camper.png'); ?>" alt=""> Campers : <?php echo $_SESSION["ressources"]->camper; ?></a></li>
 			</ul>
 			<?php } ?>
 

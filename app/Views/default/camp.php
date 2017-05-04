@@ -14,7 +14,7 @@
     <div class="row">
         <div class="batiment col-lg-4 col-md-6 col-sm-6">
             <div class="media">
-            <img class="d-flex mr-3 img-responsive" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
+            <img class="d-flex mr-3 img-responsive" src="assets/img/bucheron.jpg" alt="Generic placeholder image">
             <div class="media-body">
                 <h5 class="mt-0 text-left"><strong>Camp de bûcheron</strong> Niveau : <?php echo $_SESSION["buildings"]->wood_farm; ?></h5>
 
@@ -35,7 +35,7 @@
         <!--batiment 2-->
         <div class="batiment col-lg-4 col-md-6 col-sm-6">
             <div class="media">
-            <img class="d-flex mr-3 img-responsive" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
+            <img class="d-flex mr-3 img-responsive" src="assets/img/farm.jpg" alt="Generic placeholder image">
             <div class="media-body">
                 <h5 class="mt-0 text-left"><strong>Ferme</strong> Niveau : <?php echo $_SESSION["buildings"]->food_farm; ?></h5>
 
@@ -59,7 +59,7 @@
         <!--batiment 3-->
         <div class="batiment col-lg-4 col-md-6 col-sm-6">
             <div class="media">
-                <img class="d-flex mr-3 img-responsive" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
+                <img class="d-flex mr-3 img-responsive" src="assets/img/puit.jpg" alt="Generic placeholder image">
                 <div class="media-body">
                     <h5 class="mt-0 text-left"><strong>Puit</strong> Niveau : <?php echo $_SESSION["buildings"]->water_farm; ?></h5>
                     
@@ -87,7 +87,7 @@
         </br>
         <div class="batiment col-lg-4 col-md-6 col-sm-6">
             <div class="media">
-            <img class="d-flex mr-3 img-responsive" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
+            <img class="d-flex mr-3 img-responsive" src="assets/img/hangar.jpg" alt="Generic placeholder image">
             <div class="media-body">
                 <h5 class="mt-0 text-left"><strong>Hangar</strong> Niveau : <?php echo $_SESSION["buildings"]->wood_stock; ?></h5>
 
@@ -114,7 +114,7 @@
         <!--batiment 5-->
         <div class="batiment col-lg-4 col-md-6 col-sm-6">
             <div class="media">
-            <img class="d-flex mr-3 img-responsive" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
+            <img class="d-flex mr-3 img-responsive" src="assets/img/stockpile.jpg" alt="Generic placeholder image">
             <div class="media-body">
                 <h5 class="mt-0 text-left"><strong>Garde manger</strong> Niveau : <?php echo $_SESSION["buildings"]->food_stock; ?></h5>
 
@@ -138,7 +138,7 @@
         <!--batiment 6-->
         <div class="batiment col-lg-4 col-md-6 col-sm-6">
             <div class="media">
-            <img class="d-flex mr-3 img-responsive" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
+            <img class="d-flex mr-3 img-responsive" src="assets/img/citerne.jpg" alt="Generic placeholder image">
             <div class="media-body">
                 <h5 class="mt-0 text-left"><strong>Citerne</strong> Niveau : <?php echo $_SESSION["buildings"]->water_stock; ?></h5>
 
@@ -167,7 +167,7 @@
     <div class="row">
         <div class="batiment col-lg-4 col-md-6 col-sm-6">
             <div class="media">
-            <img class="d-flex mr-3 img-responsive" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
+            <img class="d-flex mr-3 img-responsive" src="assets/img/cabane.jpg" alt="Generic placeholder image">
             <div class="media-body">
                 <h5 class="mt-0 text-left"><strong>Cabanon</strong> Niveau : <?php echo $_SESSION["buildings"]->cabanon; ?></h5>
 
@@ -193,7 +193,7 @@
         <!--batiment 8-->
         <div class="batiment col-lg-4 col-md-6 col-sm-6">
             <div class="media">
-            <img class="d-flex mr-3 img-responsive" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
+            <img class="d-flex mr-3 img-responsive" src="assets/img/radio.jpg" alt="Generic placeholder image">
             <div class="media-body">
                 <h5 class="mt-0 text-left"><strong>Station de radio</strong> Niveau : <?php echo $_SESSION["buildings"]->radio; ?></h5>
 
@@ -219,7 +219,7 @@
         <!--batiment 9-->
         <div class="batiment col-lg-4 col-md-6 col-sm-6">
             <div class="media">
-            <img class="d-flex mr-3 img-responsive" src="assets/img/LOGO_Campeurs_VS_Zombies.png" alt="Generic placeholder image">
+            <img class="d-flex mr-3 img-responsive" src="assets/img/mur.jpg" alt="Generic placeholder image">
             <div class="media-body">
                 <h5 class="mt-0 text-left"><strong>Mur de defense</strong> Niveau : <?php echo $_SESSION["buildings"]->wall; ?></h5>
                 

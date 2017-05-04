@@ -56,7 +56,15 @@
             
             // Ajoute un message dans la page
             function insereMessage(pseudo, message) {
-                $('#zone_chat').prepend('<p class="container-fluid"><strong>' + pseudo + '</strong> ' + message + '</p>');
+                var insultes =['con','connard','merde','pd','salope','petasse','pute','putain','bite','abruti','enculer','enculé','enculay','tg','ntm','batard','bougnoul','bougnoule','boukak','branleur','fdp','garce'];
+                var words = message.split(' ');
+                for(word in words){
+                    var found = insultes.includes(words[word].toLowerCase());
+                    if(found){
+                        words[word]='****';
+                    }
+                }
+                message = words.join(' ');
             }
         </script>
 <?php $this->stop('main_content') ?>
