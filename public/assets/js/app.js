@@ -69,3 +69,16 @@ function loadBar(){
 
     bar.animate(1.0);
 }
+$(window).scroll(function scrolled(){
+    if ($(window).scrollTop() > 260)
+    {
+    $('.scroll').css({
+        position:'fixed',
+        top:'0px'
+    })
+} else if ($(window).scrollTop() < 260) {
+    $('.scroll').css({
+        top:'260px',
+        position:'absolute'
+    })
+}});
