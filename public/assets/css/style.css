@@ -112,11 +112,19 @@ header {
 }
 
 .navbar {
-	background-color: silver;
+	background-image: url(../img/brouillard.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
 }
 
 #menu ul li a {
 	color: black;
+}
+
+.navbar {
+	border: 0px!important;
+	border-radius: 0px;
 }
 
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
