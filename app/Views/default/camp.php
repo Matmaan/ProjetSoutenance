@@ -91,6 +91,7 @@
             </div>
         </div>
     </div> 
+    </div>
         <!--batiment 4-->
     <div class="row">
         </br>

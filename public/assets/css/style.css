@@ -82,6 +82,19 @@ header {
 	list-style-type: none;
 }
 
+.btn-success{
+	background-color: transparent;
+	border: 2px solid white;
+}
+
+.btn-success:hover{
+	background-color: #654227;
+	border: 2px solid #301d16;
+}
+
+.btn-success:focus{
+	background-color: #654227;
+	border: 2px solid #301d16;
 .header img {
 	margin: auto; 
 }
@@ -106,5 +119,4 @@ header {
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
 	background-color: #915e36;
 	color: white!important;
->>>>>>> 4d78d175f855da2e7436f10122192c5cb02fbbe1
 }
